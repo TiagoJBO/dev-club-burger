@@ -4,6 +4,11 @@ import { resolve } from 'path'
 import './database'
 import cors from 'cors'
 
+const corsOption={
+  origin:'https://dev-club-burger-react-interface.vercel.app/',
+  
+  credentials:true
+}
 class App {
   constructor() {
     this.app = express()
