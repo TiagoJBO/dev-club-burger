@@ -6,13 +6,12 @@ import cors from 'cors'
 
 const corsOption={
   origin:'https://dev-club-burger-react-interface.vercel.app/',
-  
   credentials:true
 }
 class App {
   constructor() {
     this.app = express()
-    this.app.use(cors())
+    this.app.use(cors(corsOption))
 
     this.middlewares()
     this.routes()

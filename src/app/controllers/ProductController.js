@@ -91,7 +91,7 @@ class ProductsController {
       await Product.update(
         {
           name,
-          price,
+          price:price,
           category_id,
           path,
           offer,
