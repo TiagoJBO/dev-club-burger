@@ -29,7 +29,7 @@ class ProductsController {
 
       const product = await Product.create({
         name,
-        price: price,
+        price,
         category_id,
         path,
         offer,
@@ -91,7 +91,7 @@ class ProductsController {
       await Product.update(
         {
           name,
-          price:price,
+          price: price,
           category_id,
           path,
           offer,
