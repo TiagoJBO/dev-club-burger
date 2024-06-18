@@ -11,7 +11,7 @@ class Product extends Model {
         url: {
           type: Sequelize.VIRTUAL,
           get() {
-            return `http://localhost:3001/products-file/${this.path}`
+            return `https://dev-club-burger-production-d0a3.up.railway.app/${this.path}`
           },
         },
       },
@@ -22,7 +22,7 @@ class Product extends Model {
     return this
   }
   static associate(models) {
-    this.belongsTo(models.Category,{
+    this.belongsTo(models.Category, {
       foreignKey: 'category_id',
       as: 'category',
     })
