@@ -16,7 +16,7 @@ const uploads = multer(multerConfig)
 const routes = new Router()
 
 routes.get('/', (req, res) => {
-  return res.json({ message: 'Hello to my first ApI' })
+  return res.json({ message: 'Hello to my first API' })
 })
 
 routes.post('/users', UserController.store)
@@ -25,7 +25,7 @@ routes.post('/sessions', SessionController.store)
 
 routes.use(authMiddleware) // será chamados por todas as rotas ABAIXO
 
-routes.post('/Products', uploads.single('file'), productController.store)
+routes.post('/products', uploads.single('file'), productController.store)
 routes.get('/products', productController.index)
 routes.put('/products/:id', uploads.single('file'), productController.update)
 
