@@ -21,7 +21,7 @@ routes.get('/', (req, res) => {
 
 routes.post('/users', UserController.store)
 
-routes.post('/sessions', SessionController.store)
+routes.post('/Sessions', SessionController.store)
 
 routes.use(authMiddleware) // será chamados por todas as rotas ABAIXO
 
