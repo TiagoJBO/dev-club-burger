@@ -19,19 +19,19 @@ routes.get('/',(req, res)=>{
     return res.json({message: 'Hello to my first API'})
 })
 
-routes.post('/users', UserController.store)
+routes.post('/Users', UserController.store)
 
-routes.post('/sessions', SessionController.store)
+routes.post('/Sessions', SessionController.store)
 
 routes.use(authMiddleware) // será chamados por todas as rotas ABAIXO
 
-routes.post('/products', uploads.single('file'), ProductController.store)
-routes.get('/products', ProductController.index)
-routes.put('/products/:id', uploads.single('file'), ProductController.update)
+routes.post('/Products', uploads.single('file'), ProductController.store)
+routes.get('/Products', ProductController.index)
+routes.put('/Products/:id', uploads.single('file'), ProductController.update)
 
-routes.post('/categories', uploads.single('file'), CategoryController.store)
-routes.get('/categories', CategoryController.index)
-routes.put('/categories/:id', uploads.single('file'), CategoryController.update)
+routes.post('/Categories', uploads.single('file'), CategoryController.store)
+routes.get('/Categories', CategoryController.index)
+routes.put('/Categories/:id', uploads.single('file'), CategoryController.update)
 
 routes.post('/orders', OrderController.store)
 routes.put('/orders/:id', OrderController.update)
