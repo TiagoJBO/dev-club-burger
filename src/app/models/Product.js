@@ -11,7 +11,7 @@ class Product extends Model {
         url: {
           type: Sequelize.VIRTUAL,
           get() {
-            return `dev-club-burger-production-10b4.up.railway.app${this.path}`
+            return `dev-club-burger-production-d0ae.up.railway.app${this.path}`
           },
         },
       },
