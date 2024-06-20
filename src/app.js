@@ -6,7 +6,7 @@ import cors from 'cors'
 
 const corsOptions = {
   origin: 'https://dev-club-burger-react-interface.vercel.app/',
-  Credential: true,
+  credential: true,
 }
 
 class App {
