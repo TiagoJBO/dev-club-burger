@@ -5,7 +5,7 @@ import './database'
 import cors from 'cors'
 
 const corsOptions = {
-  origin: 'http://dev-club-burger-production-b410.up.railway.app',
+  origin: 'https://dev-club-burger-react-interface.vercel.app/login',
   credential: true,
 }
 
