@@ -6,7 +6,7 @@ import cors from 'cors'
 
 const corsOptions = {
   origin: 'http://dev-club-burger-production-b08e.up.railway.app',
-  Credential: true,
+  credential: true,
 }
 
 class App {
